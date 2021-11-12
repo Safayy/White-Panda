@@ -1,0 +1,81 @@
+/*
+Colours: 
+Yellow: #fbe8a6
+Orange: #f4976c
+Dark Blue: #303c6c
+Faded Blue: #b4dfe5
+Light Blue: #d2fdff
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: verdana, sans-serif;
+}
+
+html, body {
+	height: 100%;	
+	width: 100%;
+}
+
+body {
+	background-color: #fbe8a6;
+}
+
+#header {
+	background-color: #f4976c;
+	padding: 10px;
+	text-align: center;
+}
+
+/*
+h1{
+	font-size: 150%;
+	font-style: italic;
+	font-family: copperplate, serif;
+}
+*/
+
+#header img {
+	height: 120px;
+	cursor: pointer;
+}
+
+.container-title {
+	width: 78%;
+	text-align: center;
+	margin-top: 30px;
+	padding: 10px;
+	font-size: 130%;
+	text-shadow: 2px 2px 2px #f4976c;
+}
+
+.flex-container {
+	width: 81%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-container div {
+	background-color: white;
+	width: 225px;
+	height: 275px;
+	margin: 10px;
+	padding: 5px;
+	border-radius: 25px;
+	text-align: center;
+}
+
+.items img {
+	width: 100%;
+	border-radius: 25px 25px 0px 0px;
+}
+
+.items p {
+	width: 100%;
+	height: 17%;
+	border-radius: 0px 0px 25px 25px;
+	background-color: white;
+	font-size: 90%;
+	user-select: none;
+}
