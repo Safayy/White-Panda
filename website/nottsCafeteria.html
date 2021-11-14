@@ -28,13 +28,30 @@
 	
 	<!-- header + logo ends here -->
 
-	<nav>
-		<a href="nottsCafeteria.html">Home</a>
-		<a href="">About</a>
-		<a href="">MyNottingham</a>
-		<a href="">Outlook</a>
-		<a href="">Vegetarian</a>
-		<a href="">Cart</a>
+	<nav class="menu-bar">
+		<ul>
+		<li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+		<li><a href="#"><i class="fa fa-user"></i>About</a></li>
+		<li><a href="#">MyNottingham</a></li>
+		<li><a href="#">Outlook</a></li>
+		<li><a href="#">Vegetarian</a></li>
+		<li><div class="dropdown-wrapper">
+				<a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart</a>
+					<div class="cart-dropdown">
+							<!-- cart starts here -->
+	
+							<div id="cart">
+							
+								<p></p>
+							
+							</div>
+							
+							<!-- cart ends here -->
+					</div>
+			</div>
+			
+		</li>
+		</ul>
 	</nav>
 	
 	<button id="back2top" onclick="smoothScrollToTop()"><p>Back To<br>Top</p></button>
@@ -156,16 +173,7 @@
 	<!-- food catalogue ends here -->
 	
 	<br><br>
-	
-	<!-- cart starts here -->
-	
-	<div id="cart">
-	
-		<p>Cart</p>
-	
-	</div>
-	
-	<!-- cart ends here -->
+
 
 	<br><br><br><br><br><br><br><br><br>
 	<br><br><br><br><br><br><br><br><br>

@@ -30,4 +30,8 @@ $(document).ready(function() {
 		$(this).parent().remove();
 	});
 	
+	$('.dropdown-wrapper').children().first().click(function() {
+		$('.cart-dropdown').toggle();
+	})
+	
 });
