@@ -39,6 +39,13 @@ $(document).ready(function() {
 			event.preventDefault();
 			event.stopPropagation();
 			
+			let entry = $('#userinput').val();
+			let reply = "no";
+			
+			let html = '<div class="messages">' + entry + '</div>' + '<div class="messages">' + reply + '</div>';; 
+		
+			$('#display').children('.messages').last().after(html);
+			$("#display").scrollTop($("#display")[0].scrollHeight);
 			
 			$('#userinput').select();
 			
@@ -46,3 +53,8 @@ $(document).ready(function() {
 	});
 	
 });
+
+	
+	
+	
+	

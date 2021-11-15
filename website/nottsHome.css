@@ -83,9 +83,21 @@ h1{
 	height: 190px;
 	margin: auto;
 	top: 3%;
-	position: relative;
-	border-radius: 15px;
+	left: 2%;
+	position: absolute;
+	border-radius: 5px;
+	overflow: scroll;
 }
+
+
+.messages {
+	background-color: green;
+	position: relative;
+	line-height: 80%;
+	padding: 5px;
+	text-align: left;
+}
+
 
 #chatbox form {
 	bottom: 2%;
