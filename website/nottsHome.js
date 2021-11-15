@@ -34,4 +34,15 @@ $(document).ready(function() {
 		$('.cart-dropdown').toggle();
 	})
 	
+	$('#userinput').keypress(function(event) {
+		if ( event.which == 13 ) {
+			event.preventDefault();
+			event.stopPropagation();
+			
+			
+			$('#userinput').select();
+			
+		}
+	});
+	
 });
