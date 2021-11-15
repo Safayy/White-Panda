@@ -24,7 +24,7 @@ body {
 
 #header {
 	background-color: #f4976c;
-	padding: 10px;
+	padding-top: 10px;
 	text-align: center;
 }
 
@@ -64,6 +64,45 @@ h1{
 	background-color: #303c6c;
 	color: white;
 	cursor: pointer;
+}
+
+#chatbox {
+	width: 25%;
+	height: 43%;
+	position: fixed;
+	background-color: pink;
+	right: 1%;
+	top: 40%;
+	text-align: center;
+	border-radius: 15px;
+}
+
+#display {
+	background-color: white;
+	width: 96%;
+	height: 190px;
+	margin: auto;
+	top: 3%;
+	position: relative;
+	border-radius: 15px;
+}
+
+#chatbox form {
+	bottom: 2%;
+	position: absolute;
+	width: 100%;
+}
+
+#userinput {
+	width: 90%;
+	line-height: 130%;
+	padding: 10px;
+	border: none;
+	border-radius: 15px;
+}
+
+#userinput:focus {
+	outline: none;
 }
 
 .container-title {
