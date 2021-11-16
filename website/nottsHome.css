@@ -28,14 +28,6 @@ body {
 	text-align: center;
 }
 
-/*
-h1{
-	font-size: 150%;
-	font-style: italic;
-	font-family: copperplate, serif;
-}
-*/
-
 #header img {
 	height: 120px;
 	cursor: pointer;
@@ -91,11 +83,14 @@ h1{
 
 
 .messages {
-	background-color: green;
 	position: relative;
-	line-height: 80%;
+	line-height: 100%;
 	padding: 5px;
 	text-align: left;
+}
+
+#firstmsg {
+	top: -5%;
 }
 
 
@@ -276,4 +271,16 @@ h1{
 
 .cart-dropdown:hover .cart-dropdown{
     display: block;
+}
+
+footer {
+	height: 15%;
+	background-color: #f4976c;
+	position: relative;
+}
+
+footer p {
+	position: absolute;
+	bottom: 5%;
+	color: black;
 }
