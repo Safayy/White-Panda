@@ -1,0 +1,118 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [ "hello", "hi", "howdy", "good morning", "good afternoon", "good evening", "good day", "nice to meet you" ],
+      "responses": [ "Hello! Welcome to our humble Notts-Cafeteria website.", "Hello, Nice to meet you. I can answer any questions you have about Notts-Cafeteria here.", "Hello there, how can we at Notts-Cafeteria help you?", "Hello! Welcome to the Nott-cafeteria. Is there anything I can help you with?" ],
+      "context_set": ""
+    },
+    {
+      "tag": "howareyou",
+      "patterns": [ "how are you", "hru", "are you good"],
+      "responses": [ "We are great here an Notts-Cafeteria. Please order something.", "We would be better if you ordered something :>", "We are fantasic here! Thank you for asking" ],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [ "bye bye", "see you", "cya", "see you later", "goodbye", "i am leaving", "have a good day", "bye" ],
+      "responses": [ "Goodbye. Thank you and please come again to Notts-Cafeteria", "Have a good day and please come again to Notts-Cafeteria", "Goodbye! Please come again" ],
+      "context_set": ""
+    },
+    {
+      "tag": "thankyou",
+      "patterns": [ "thank you", "thanks", "appreciate that"],
+      "responses": [ "No problem! You may ask any other questions", "Glad that was helpful. Please ask anything else you need", "Happy to help. Please ask me any other questions you may have" ],
+      "context_set": ""
+    },
+    {
+      "tag": "hours",
+      "patterns": [ "what time are you open", "are you open now", "when are you open", "what are your hours", "hours of operation", "hours of opening" ],
+      "responses": [ "We are open everyday 8AM to 7PM" ],
+      "context_set": ""
+    },
+    {
+      "tag": "cart_cost",
+      "patterns": [ "how much in total", "how much does that cost in total", "what is the total of my cart","my total"],
+      "responses": [ "The cost of your items can be seen by clicking on cart in the navigation bar." ],
+      "context_set": ""
+    },
+    {
+      "tag": "cart_items",
+      "patterns": [ "what do i have in my cart", "whats in my cart", "what items are in my cart", "how many items are in my cart" ],
+      "responses": [ "To view your cart items click on the cart in the navigation bar." ],
+      "context_set": ""
+    },
+    {
+      "tag": "stall_name",
+      "patterns": [ "what stall", "which stall","which stalls","what stalls","stall"],
+      "responses": [ "We have many stall in our cafeteria that serve a number of differnt meals. Please enjoy the variery" ],
+      "context_set": ""
+    },
+    {
+      "tag": "item_price",
+      "patterns": [ "cost", "price", "how much","what price","what cost"],
+      "responses": [ "To see the cost, please hover over the cart icon above" ],
+      "context_set": ""
+    },
+    {
+      "tag": "is_delivery_service",
+      "patterns": [ "deliverable", "deliver", "delivery" ],
+      "responses": [ "Some items are deliverable right to your location" ],
+      "context_set": ""
+    },
+    {
+      "tag": "is_vegetarian",
+      "patterns": [ "is vegetarian", "vegetarian","hindu" ],
+      "responses": [ "Many items in our cafeteria are vegetarian friendly" ],
+      "context_set": ""
+    },
+    {
+      "tag": "is_cosher",
+      "patterns": [ "is cosher", "cosher","jewish"],
+      "responses": [ "Most items in our cafeteria are cosher safe" ],
+      "context_set": ""
+    },
+    {
+      "tag": "is_hallal",
+      "patterns": [ "is hallal", "hallal","muslim","the hallal"],
+      "responses": [ "We have many hallal items in our cafeteria" ],
+      "context_set": ""
+    },
+    {
+      "tag": "is_dessert",
+      "patterns": [ "is dessert", "dessert","is a dessert"],
+      "responses": [ "We are building up our amount of dessert currently. The kuih here is delicious" ],
+      "context_set": ""
+    },
+    {
+      "tag": "is_appetizer",
+      "patterns": [ "is it appetizer", "appetizer", "is an appatizer"],
+      "responses": [ "We have many appetizers in our cafeteria" ],
+      "context_set": ""
+    },
+    {
+      "tag": "item_preperation_time",
+      "patterns": [ "how long does take to prepare", "long make","long prepare","preparation time","time to make"],
+      "responses": [ "The meals are prepared in a short resonable time and will be avaiable to you, fresh, to enjoy" ],
+      "context_set": ""
+    },
+    {
+      "tag": "item_meal_base",
+      "patterns": [ "what is the base of", "what is", "explain", "base of", "based on","noodle","rice","bread"],
+      "responses": [ "We have many cuisines in our cafeteria, based in rice, bread and even noodles" ],
+      "context_set": ""
+    },
+    {
+      "tag": "calories",
+      "patterns": [ "how many calories is", "calories" ],
+      "responses": [ "All items in our cafeteria have a calorie counted for" ],
+      "context_set": ""
+    },
+    {
+      "tag": "allergants",
+      "patterns": [ "alergic", "allergy", "which have allergy","a allergy"],
+      "responses": [ "Some meals may contain traces of items that may cause allergies. We advice you to check before you consume anything" ],
+      "context_set": ""
+    }
+  ]
+}
