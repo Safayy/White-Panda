@@ -1,5 +1,4 @@
-#Virtual Environment
-venv/
+#Virtual Environment venv/
 #Flask
 instance/*
 !instance/.gitignore
