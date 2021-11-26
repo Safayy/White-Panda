@@ -30,7 +30,7 @@ $(document).ready(function() {
 		$(this).parent().remove();
 	});
 	
-	$('.dropdown-wrapper').children().first().click(function() {
+	$('.dropdown-wrapper').children().first().click(function(e) {
 		e.preventDefault();
 		$('.cart-dropdown').toggle();
 	})	
