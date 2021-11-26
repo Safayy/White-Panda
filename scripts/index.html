@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="White Pandas">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../static/images/z-favicon.png">
+<link rel="stylesheet" href="../static/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+	<title>Notts-Cafeteria - Home</title>
+</head>
+
+<body>
+
+	<a id="top"></a>
+	
+	<!-- header + logo starts from here -->
+	
+	<div id="header">
+		<a href="/"><img src="../static/images/z-logo.png"/></a>
+	</div>
+	
+	<!-- header + logo ends here -->
+	
+	<!-- navigation bar starts from here -->
+
+	<nav class="menu-bar">
+		<ul>
+		<li class="active"><a href="/"><i class="fa fa-home"></i>Home</a></li>
+		<li><a href="#"><i class="fa fa-user"></i>About</a></li>
+		<li><a href="http://mynottingham.nottingham.ac.uk/">MyNottingham</a></li>
+		<li><a href="https://outlook.office.com/mail/inbox">Outlook</a></li>
+		<li><a href="https://www.heartandstroke.ca/healthy-living/healthy-eating/healthy-eating-basics">Healthy Eating</a></li>
+		<li><div class="dropdown-wrapper">
+				<a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart</a>
+					<div class="cart-dropdown">
+							<!-- cart starts here -->
+	
+							<div id="cart">
+							
+								<p></p>
+							
+							</div>
+							
+							<!-- cart ends here -->
+					</div>
+			</div>
+			
+		</li>
+		</ul>
+	</nav>
+	
+	<!-- navigation bar ends here -->
+	
+	<!-- "back to top" button starts from here -->
+	
+	<button id="back2top" onclick="smoothScrollToTop()"><p>Back To<br>Top</p></button>
+	
+	<!-- "back to top" button ends here -->
+	
+	<!-- chatbot starts from here -->
+	
+	<form action="/" method="POST" autocomplete="off" id="chatbot-form" novalidate>
+		<p id="out">{{output}}</p>
+
+		{%if output%}
+		<script>
+			var a = document.getElementById('out').innerHTML;				
+			console.log(a);
+			
+		</script>
+		{%endif%}
+		<input type="text" name="userInput" id="userinput" autofocus><br>
+		<button type="submit" id="chatbot-button">Send</button>
+	</form>
+	
+	<!-- chatbot ends here -->
+
+	<!-- food catalogue starts from here -->
+	
+	<p class="container-title">&#9656; &#9656; &#9656; &emsp; Malay Stall &emsp; &#9666; &#9666; &#9666;</p>
+	
+	<div class="flex-container">
+		<div class="items"><img src="../static/images/malay/nasi-lemak.jpg"/><p>Nasi Lemak<br>RM 2.00</p><button class="toCart" data-name="Nasi Lemak" data-price="RM 2.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/malay/nasi-goreng-kampung.jpeg"/><p>Nasi Goreng Kampung<br>RM 6.00</p><button class="toCart" data-name="Nasi Goreng Kampung" data-price="RM 6.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/malay/nasi-goreng-tomyam.jpg"/><p>Nasi Goreng Tomyam<br>RM 6.50</p><button class="toCart" data-name="Nasi Goreng Tomyam" data-price="RM 6.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/malay/nasi-goreng-ikan-masin.jpg"/><p>Nasi Goreng Ikan Masin<br>RM 6.50</p><button class="toCart" data-name="Nasi Goreng Ikan Masin" data-price="RM 6.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/malay/nasi-goreng-paprik.jpg"/><p>Nasi Goreng Paprik<br>RM 7.00</p><button class="toCart" data-name="Nasi Goreng Paprik" data-price="RM 7.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/malay/nasi-goreng-usa.jpg"/><p>Nasi Goreng USA<br>RM 7.00</p><button class="toCart" data-name="Nasi Goreng USA" data-price="RM 7.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/malay/nasi-goreng-pattaya.jpeg"/><p>Nasi Goreng Pattaya<br>RM 7.00</p><button class="toCart" data-name="Nasi Goreng Pattaya" data-price="RM 7.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/malay/nasi-goreng-biasa.jpg"/><p>Nasi Goreng Biasa<br>RM 5.00</p><button class="toCart" data-name="Nasi Goreng Biasa" data-price="RM 5.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/malay/ikan-goreng.jpeg"/><p>Ikan Goreng<br>RM 3.50</p><button class="toCart" data-name="Ikan Goreng" data-price="RM 3.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/malay/ayam-goreng.jpg"/><p>Ayam Goreng<br>RM 3.00</p><button class="toCart" data-name="Ayam Goreng" data-price="RM 3.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/malay/satay.jpg"/><p>Satay<br>RM 1.20</p><button class="toCart" data-name="Satay" data-price="RM 1.20">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/malay/kuih-talam.jpg"/><p>Kuih Talam<br>RM 0.70</p><button class="toCart" data-name="Kuih Talam" data-price="RM 0.70">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/malay/kuih-koci.jpg"/><p>Kuih Koci<br>RM 0.40</p><button class="toCart" data-name="Kuih Koci" data-price="RM 0.40">Add to Cart</button></div>
+	</div>
+	
+	<p class="container-title">&#9656; &#9656; &#9656; &emsp; Mamak Stall &emsp; &#9666; &#9666; &#9666;</p>
+	
+	<div class="flex-container">
+		<div class="items"><img src="../static/images/mamak/roti-canai.jpg"/><p>Roti Canai<br>RM 1.20</p><button class="toCart" data-name="Roti Canai" data-price="RM 1.20">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/mamak/roti-telur.jpg"/><p>Roti Telur<br>RM 2.30</p><button class="toCart" data-name="Roti Telur" data-price="RM 2.30">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/mamak/roti-cheese.jpeg"/><p>Roti Cheese<br>RM 2.50</p><button class="toCart" data-name="Roti Cheese" data-price="RM 2.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/mamak/roti-boom.jpg"/><p>Roti Boom<br>RM 2.20</p><button class="toCart" data-name="Roti Boom" data-price="RM 2.20">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/mamak/roti-planta.jpg"/><p>Roti Planta<br>RM 2.20</p><button class="toCart" data-name="Roti Planta" data-price="RM 2.20">Add to Cart</button></div>		
+		<div class="items"><img src="../static/images/mamak/roti-susu.jpeg"/><p>Roti Susu<br>2.20</p><button class="toCart" data-name="Roti Susu" data-price="RM 2.20">Add to Cart</button></div>		
+		<div class="items"><img src="../static/images/mamak/roti-tisu.jpg"/><p>Roti Tisu<br>RM 3.20</p><button class="toCart" data-name="Roti Tisu" data-price="RM 3.20">Add to Cart</button></div>		
+		<div class="items"><img src="../static/images/mamak/tosai.jpg"/><p>Tosai<br>RM 1.20</p><button class="toCart" data-name="Tosai" data-price="RM 1.20">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/mamak/mee-goreng.jpg"/><p>Mee Goreng<br>RM 5.00</p><button class="toCart" data-name="Mee Goreng" data-price="RM 5.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/mamak/maggi-goreng.jpg"/><p>Maggi Goreng<br>RM 5.00</p><button class="toCart" data-name="Maggi Goreng" data-price="RM 5.00">Add to Cart</button></div>		
+		<div class="items"><img src="../static/images/mamak/maggi-soup.jpg"/><p>Maggi Soup<br>RM 4.00</p><button class="toCart" data-name="Maggi Soup" data-price="RM 4.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/mamak/teh-tarik-ais.jpg"/><p>Teh Tarik Ais<br>RM 2.20</p><button class="toCart" data-name="Teh Tarik Ais" data-price="RM 2.20">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/mamak/teh-tarik-panas.png"/><p>Teh Tarik Panas<br>RM 1.80</p><button class="toCart" data-name="Teh Tarik Panas" data-price="RM 1.80">Add to Cart</button></div>		
+		<div class="items"><img src="../static/images/mamak/milo-ais.jpg"/><p>Milo Ais<br>RM 2.50</p><button class="toCart" data-name="Milo Ais" data-price="RM 2.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/mamak/milo-panas.jpg"/><p>Milo Panas<br>RM 2.20</p><button class="toCart" data-name="Milo Panas" data-price="RM 2.20">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/mamak/cincau.jpg"/><p>Cincau<br>RM 2.50</p><button class="toCart" data-name="Cincau" data-price="RM 2.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/mamak/limau-ais.jpg"/><p>Limau Ais<br>RM 1.80</p><button class="toCart" data-name="Limau Ais" data-price="RM 1.80">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/mamak/limau-panas.jpg"/><p>Limau Panas<br>RM 1.50</p><button class="toCart" data-name="Limau Panas" data-price="RM 1.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/mamak/bandung-ais.jpg"/><p>Bandung Ais<br>RM 2.00</p><button class="toCart" data-name="Bandung Ais" data-price="RM 2.00">Add to Cart</button></div>
+	</div>
+
+	<p class="container-title">&#9656; &#9656; &#9656; &emsp; Beverages &emsp; &#9666; &#9666; &#9666;</p>
+	
+	<div class="flex-container">
+		<div class="items"><img src="../static/images/beverages/apple-juice.jpg"/><p>Apple Juice<br>RM 5.00</p><button class="toCart" data-name="Apple Juice" data-price="RM 5.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/beverages/orange-juice.jpg"/><p>Orange Juice<br>RM 5.00</p><button class="toCart" data-name="Orange Juice" data-price="RM 5.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/beverages/watermelon-juice.jpg"/><p>Watermelon Juice<br>RM 5.00</p><button class="toCart" data-name="Watermelon Juice" data-price="RM 5.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/beverages/cucumber-juice.jpg"/><p>Cucumber Juice<br>RM 5.00</p><button class="toCart" data-name="Cucumber Juice" data-price="RM 5.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/beverages/pineapple-juice.jpg"/><p>Pineapple Juice<br>RM 5.00</p><button class="toCart" data-name="Pineapple Juice" data-price="RM 5.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/beverages/carrot-juice.jpg"/><p>Carrot Juice<br>RM 5.00</p><button class="toCart" data-name="Carrot Juice" data-price="RM 5.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/beverages/espresso.jpg"/><p>Espresso<br>RM 6.00</p><button class="toCart" data-name="Espresso" data-price="RM 6.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/beverages/hot-americano.jpg"/><p>Hot Americano<br>RM 7.00</p><button class="toCart" data-name="Hot Americano" data-price="RM 7.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/beverages/iced-americano.jpg"/><p>Iced Americano<br>RM 8.00</p><button class="toCart" data-name="Iced Americano" data-price="RM 8.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/beverages/hot-latte.jpg"/><p>Hot Latte<br>RM 9.00</p><button class="toCart" data-name="Hot Latte" data-price="RM 9.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/beverages/iced-latte.jpeg"/><p>Iced Latte<br>RM 10.00</p><button class="toCart" data-name="Iced Latte" data-price="RM 10.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/beverages/hot-cappuccino.jpg"/><p>Hot Cappuccino<br>RM 9.00</p><button class="toCart" data-name="Hot Cappuccino" data-price="RM 9.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/beverages/iced-cappuccino.jpg"/><p>Iced Cappuccino<br>RM 10.00</p><button class="toCart" data-name="Iced Cappuccino" data-price="RM 10.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/beverages/hot-mocha.jpg"/><p>Hot Mocha<br>RM 9.00</p><button class="toCart" data-name="Hot Mocha" data-price="RM 9.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/beverages/iced-mocha.jpg"/><p>Iced Mocha<br>RM 10.00</p><button class="toCart" data-name="Iced Mocha" data-price="RM 10.00">Add to Cart</button></div>
+	</div>
+
+	<p class="container-title">&#9656; &#9656; &#9656; &emsp; Korean &emsp; &#9666; &#9666; &#9666;</p>
+	
+	<div class="flex-container">
+		<div class="items"><img src="../static/images/korean/tteok.jpg"/><p>Tteok<br>RM 2.00</p><button class="toCart" data-name="Tteok" data-price="RM 2.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/korean/kimchi.jpg"/><p>Kimchi<br>RM 4.00</p><button class="toCart" data-name="Kimchi" data-price="RM 4.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/korean/gimbap.jpg"/><p>Gimbap<br>RM 4.50</p><button class="toCart" data-name="Gimbap" data-price="RM 4.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/korean/tteokbokki.jpg"/><p>Tteokbokki<br>RM 5.00</p><button class="toCart" data-name="Tteokbokki" data-price="RM 5.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/korean/hobakjuk.jpg"/><p>Hobakjuk<br>RM 6.00</p><button class="toCart" data-name="Hobakjuk" data-price="RM 6.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/korean/ramyun.jpg"/><p>Ramyun<br>RM 6.50</p><button class="toCart" data-name="Ramyun" data-price="RM 6.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/korean/kimchi-fried-rice.jpg"/><p>Kimchi Fried Rice<br>RM 7.00</p><button class="toCart" data-name="Kimchi Fried Rice" data-price="RM 7.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/korean/bulgogi.jpg"/><p>Bulgogi<br>RM 7.00</p><button class="toCart" data-name="Bulgogi" data-price="RM 7.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/korean/jjajangmyeon.jpg"/><p>Jjajangmyeon<br>RM 7.00</p><button class="toCart" data-name="Jjajangmyeon" data-price="RM 7.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/korean/kongguksu.jpg"/><p>Kongguksu<br>RM 7.50</p><button class="toCart" data-name="Kongguksu" data-price="RM 7.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/korean/japchae.jpg"/><p>Japchae<br>RM 8.00</p><button class="toCart" data-name="Japchae" data-price="RM 8.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/korean/bulgogi-with-rice.jpg"/><p>Bulgogi with Rice<br>RM 8.00</p><button class="toCart" data-name="Bulgogi with Rice" data-price="RM 8.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/korean/naengmyeon.jpg"/><p>Naengmyeon<br>RM 8.50</p><button class="toCart" data-name="Naengmyeon" data-price="RM 8.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/korean/bibimbap.jpg"/><p>Bibimbap<br>RM 9.00</p><button class="toCart" data-name="Bibimbap" data-price="RM 9.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/korean/sundubu-jjigae.jpg"/><p>Sundubu Jjigae<br>RM 10.00</p><button class="toCart" data-name="Sundubu Jjigae" data-price="RM 10.0 0">Add to Cart</button></div>
+	</div>
+	
+	<p class="container-title">&#9656; &#9656; &#9656; &emsp; Japanese &emsp; &#9666; &#9666; &#9666;</p>
+	
+	<div class="flex-container">
+		<div class="items"><img src="../static/images/japanese/miso-soup.jpeg"/><p>Miso Soup<br>RM 1.50</p><button class="toCart" data-name="Miso Soup" data-price="RM 1.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/chawanmushi.jpg"/><p>Chawanmushi<br>RM 1.50</p><button class="toCart" data-name="Chawanmushi" data-price="RM 1.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/gyoza.jpg"/><p>Gyoza<br>RM 5.00</p><button class="toCart" data-name="Gyoza" data-price="RM 5.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/tempura.jpg"/><p>Tempura<br>RM 5.00</p><button class="toCart" data-name="Tempura" data-price="RM 5.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/tamagoyaki.jpg"/><p>Tamagoyaki (Egg Roll)<br>RM 1.50</p><button class="toCart" data-name="Tamagoyaki (Egg Roll)" data-price="RM 1.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/teriyaki-chicken-bento.jpg"/><p>Teriyaki Chicken Bento<br>RM 8.00</p><button class="toCart" data-name="Teriyaki Chicken Bento" data-price="RM 8.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/teriyaki-vegetable-bento.jpg"/><p>Teriyaki Vegetable Bento<br>RM 6.50</p><button class="toCart" data-name="Teriyaki Vegetable Bento" data-price="RM 6.50">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/seafood-bento.jpg"/><p>Seafood Bento<br>RM 9.00</p><button class="toCart" data-name="Seafood Bento" data-price="RM 9.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/chicken-katsu-don.jpg"/><p>Chicken Katsu Don<br>RM 8.00</p><button class="toCart" data-name="Chicken Katsu Don" data-price="RM 8.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/tempura-soba.jpg"/><p>Tempura Soba<br>RM 7.00</p><button class="toCart" data-name="Tempura Soba" data-price="RM 7.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/chicken-yaki-soba.jpg"/><p>Chicken Yaki Soba<br>RM 7.00</p><button class="toCart" data-name="Chicken Yaki Soba" data-price="RM 7.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/vegetable-yaki-soba.jpg"/><p>Vegetable Yaki Soba<br>RM 6.00</p><button class="toCart" data-name="Vegetable Yaki Soba" data-price="RM 6.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/zaru-soba.jpg"/><p>Zaru Soba<br>RM 6.00</p><button class="toCart" data-name="Zaru Soba" data-price="RM 6.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/zaru-soba-tempura.jpg"/><p>Zaru Soba Tempura<br>RM 7.00</p><button class="toCart" data-name="Zaru Soba Tempura" data-price="RM 7.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/tempura-udon.jpg"/><p>Tempura Udon<br>RM 7.00</p><button class="toCart" data-name="Tempura Udon" data-price="RM 7.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/chicken-yaki-udon.jpg"/><p>Chicken Yaki Udon<br>RM 7.00</p><button class="toCart" data-name="Chicken Yaki Udon" data-price="RM 7.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/vegetable-yaki-udon.jpg"/><p>Vegetable Yaki Udon<br>RM 6.00</p><button class="toCart" data-name="Vegetable Yaki Udon" data-price="RM 6.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/zaru-udon.jpg"/><p>Zaru Udon<br>RM 6.00</p><button class="toCart" data-name="Zaru Udon" data-price="RM 6.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/zaru-udon-tempura.jpg"/><p>Zaru Udon Tempura<br>RM 7.00</p><button class="toCart" data-name="Zaru Udon Tempura" data-price="RM 7.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/chicken-teriyaki-lunch-set.jpg"/><p style="font-size: 70%">Chicken Teriyaki Lunch Set<br>(Miso Soup)<br>RM 10.00</p><button class="toCart" data-name="Chicken Teriyaki Lunch Set (Miso Soup)" data-price="RM 10.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/tempura-lunch-set.jpg"/><p style="font-size: 70%">Tempura Lunch Set<br>(Miso Soup)<br>RM 9.00</p><button class="toCart" data-name="Tempura Lunch Set (Miso Soup)" data-price="RM 9.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/vegetarian-lunch-set.jpg"/><p style="font-size: 70%">Vegetarian Lunch Set<br>(Miso Soup)<br>RM 8.00</p><button class="toCart" data-name="Vegetarian Lunch Set (Miso Soup)" data-price="RM 8.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/chicken-teriyaki-dinner-set.jpg"/><p style="font-size: 70%">Chicken Teriyaki Dinner Set<br>(Chawanmushi)<br>RM 10.00</p><button class="toCart" data-name="Chicken Teriyaki Dinner Set (Chawanmushi)" data-price="RM 10.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/tempura-dinner-set.jpg"/><p style="font-size: 70%">Tempura Dinner Set<br>(Chawanmushi)<br>RM 9.00</p><button class="toCart" data-name="Tempura Dinner Set (Chawanmushi)" data-price="RM 9.00">Add to Cart</button></div>
+		<div class="items"><img src="../static/images/japanese/vegetarian-dinner-set.jpg"/><p style="font-size: 70%">Vegetarian Dinner Set<br>(Chawanmushi)<br>RM 8.00</p><button class="toCart" data-name="Vegetarian Dinner Set (Chawanmushi)" data-price="RM 8.00">Add to Cart</button></div>
+	</div>
+	
+	<!-- food catalogue ends here -->
+	
+	<br>
+	
+	<!-- footer starts from here -->
+	
+	<footer>
+		<p>2021 &copy; White Panda</p>
+	</footer>
+	
+	<!-- footer ends here -->
+
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>	
+	<script src="../static/scripts/script.js"></script>
+
+</body>
+
+</html>
