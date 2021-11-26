@@ -25,6 +25,8 @@
 	</div>
 	
 	<!-- header + logo ends here -->
+	
+	<!-- navigation bar starts from here -->
 
 	<nav class="menu-bar">
 		<ul>
@@ -32,7 +34,7 @@
 		<li><a href="#"><i class="fa fa-user"></i>About</a></li>
 		<li><a href="http://mynottingham.nottingham.ac.uk/">MyNottingham</a></li>
 		<li><a href="https://outlook.office.com/mail/inbox">Outlook</a></li>
-		<li><a href="https://www.heartandstroke.ca/healthy-living/healthy-eating/healthy-eating-basics">Learn about healthy eating</a></li>
+		<li><a href="https://www.heartandstroke.ca/healthy-living/healthy-eating/healthy-eating-basics">Healthy Eating</a></li>
 		<li><div class="dropdown-wrapper">
 				<a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Cart</a>
 					<div class="cart-dropdown">
@@ -52,43 +54,31 @@
 		</ul>
 	</nav>
 	
+	<!-- navigation bar ends here -->
+	
+	<!-- "back to top" button starts from here -->
+	
 	<button id="back2top" onclick="smoothScrollToTop()"><p>Back To<br>Top</p></button>
 	
-	<!--chatbot-->
-	<form action="/" method="POST">
-		<input type="text" name="userInput"><br>
-		<p id=out>{{output}}</p>
+	<!-- "back to top" button ends here -->
+	
+	<!-- chatbot starts from here -->
+	
+	<form action="/" method="POST" autocomplete="off" id="chatbot-form" novalidate>
+		<p id="out">{{output}}</p>
 
 		{%if output%}
 		<script>
-			var a = document.getElementById('out').innerHTML;
+			var a = document.getElementById('out').innerHTML;				
 			console.log(a);
+			
 		</script>
 		{%endif%}
-		<button type="submit" value="submit">Calculate</button>
+		<input type="text" name="userInput" id="userinput" autofocus><br>
+		<button type="submit" id="chatbot-button">Send</button>
 	</form>
-	<!-- 
-
-		<div id="chatbox">
-		<div id="display">
-			<div class="messages"></div>
-		</div>
-		<form action="/" method="POST">
-			<input type="text" id="userinput">
-			<p id="out">{{output}}</p>
-			{%if output!='initial value'%}
-			<script>
-				var inputVal = document.getElementById("userinput").value;
-				alert(inputVal);
-			</script>
-			{%endif%}
-			<button type="submit" value="submit">Calculate</button>
-		</form>
-		</div>
-
-	-->
-
-
+	
+	<!-- chatbot ends here -->
 
 	<!-- food catalogue starts from here -->
 	
@@ -208,9 +198,13 @@
 	
 	<br>
 	
+	<!-- footer starts from here -->
+	
 	<footer>
 		<p>2021 &copy; White Panda</p>
 	</footer>
+	
+	<!-- footer ends here -->
 
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>	
 	<script src="../static/scripts/script.js"></script>
