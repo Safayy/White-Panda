@@ -50,66 +50,63 @@ body {
 	transition: 0.7s;
 }
 
-#back2top:hover 
-{
+#back2top:hover {
 	outline: none;
 	background-color: #303c6c;
 	color: white;
 	cursor: pointer;
 }
 
-#chatbox {
-	width: 25%;
-	height: 43%;
+#chatbot-form {
+	width: 30%;
+	height: 30%;
 	position: fixed;
 	background-color: pink;
-	right: 1%;
-	top: 40%;
+	right: 2%;
+	top: 50%;
 	text-align: center;
 	border-radius: 15px;
 }
 
-#display {
-	background-color: white;
-	width: 96%;
-	height: 190px;
-	margin: auto;
-	top: 3%;
-	left: 2%;
-	position: absolute;
-	border-radius: 5px;
-	overflow: scroll;
-}
-
-
-.messages {
-	position: relative;
-	line-height: 100%;
-	padding: 5px;
-	text-align: left;
-}
-
-#firstmsg {
-	top: -5%;
-}
-
-
-#chatbox form {
-	bottom: 2%;
-	position: absolute;
-	width: 100%;
+#out {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	height: 20%;
 }
 
 #userinput {
 	width: 90%;
+	height: 10%;
 	line-height: 130%;
 	padding: 10px;
 	border: none;
 	border-radius: 15px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
 #userinput:focus {
 	outline: none;
+}
+
+#chatbot-button {
+	bottom: 4%;
+	font-size: 100%;
+	width: 95%;
+	height: 20%;
+	padding: 5px;
+	border-radius: 15px;
+	border-style: none;
+	background-color: #d2fdff;
+	color: black;	
+	transition: 0.7s;	
+}
+
+#chatbot-button:hover {
+	outline: none;
+	background-color: #303c6c;
+	color: white;
+	cursor: pointer;
 }
 
 .container-title {
