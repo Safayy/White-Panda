@@ -178,7 +178,7 @@ def chatuserLoop(inputFromUser):
                             listWords = intentFile["intents"][8]["context_set"]
                             sentence = random.choice(listWords)
                             sentence = sentence.replace("?meal?", ITEMNAME)
-                            sentence = sentence.replace("?price?", f"{PRICE}0")
+                            sentence = sentence.replace("?price?", f"RM{PRICE}0")
                             return sentence
                             break;
                         elif tag == "delivery_service":
