@@ -50,7 +50,7 @@
     },
     {
       "tag": "item_price",
-      "patterns": [ "cost", "price", "how much","what price","what cost"],
+      "patterns": [ "cost", "price", "price of", "cost of","how much","what price","what cost"],
       "responses": [ "To see the cost, please hover over the cart icon above" ],
       "context_set": ["?meal? costs ?price? per serving", "The price is ?price?"]
     },
