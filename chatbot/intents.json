@@ -104,7 +104,7 @@
     },
     {
       "tag": "calories",
-      "patterns": [ "how many calories is", "calories" ],
+      "patterns": [ "healthy","calories" ],
       "responses": [ "All items in our cafeteria have a calorie counted for"],
       "context_set": ["?meal? contains ?calories? calories", "?calories? calories are in ?meal?"]
     },
