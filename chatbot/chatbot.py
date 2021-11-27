@@ -12,9 +12,9 @@ import pickle
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer()
 
-with open("D:/Repositories/WhitePandaFlask/app/chatbot/intents.json") as file:
+with open("D:/Repositories/White-Panda/chatbot/intents.json") as file:
     intentFile = json.load(file)
-with open("D:/Repositories/WhitePandaFlask/app/chatbot/menu.json", "r") as read_file:
+with open("D:/Repositories/White-Panda/chatbot/menu.json", "r") as read_file:
     x = json.load(read_file)
 
 #Methods
@@ -71,7 +71,7 @@ def bag_of_words(s, words):
 allWords = []
 allTags = []
 try:
-    with open("D:/Repositories/WhitePandaFlask/app/chatbot/intentFile.pickle", "rb") as f:
+    with open("D:/Repositories/White-Panda/chatbot/intentFile.pickle", "rb") as f:
         words, labels, training, output = pickle.load(f)
 except:
     words = []
@@ -109,7 +109,7 @@ except:
     training = numpy.array(training)
     output = numpy.array(output)
 
-    with open("D:/Repositories/WhitePandaFlask/app/chatbot/intentFile.pickle", "wb") as f:
+    with open("D:/Repositories/White-Panda/chatbot/intentFile.pickle", "wb") as f:
         pickle.dump((words, labels, training, output), f)
 
 #   Build neural network
@@ -122,11 +122,14 @@ model = tflearn.DNN(net)
 
 #   Load our model (if not there, create and train)
 try:
-    model.load("D:/Repositories/WhitePandaFlask/app/chatbot/model.learningModel")
+    model.load("D:/Repositories/White-Panda/chatbot/model.learningModel")
 except:
-    model.fit(training, output, n_epoch=50000, batch_size=8, show_metric=False)
-    model.save("D:/Repositories/WhitePandaFlask/app/chatbot/model.learningModel")
+    model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=False) #50000
+    model.save("D:/Repositories/White-Panda/chatbot/model.learningModel")
 
+def fillInfo(input):
+    sentence = ""
+    return sentence
 
 #   The chat user-bot loop
 def chatuserLoop(inputFromUser):
@@ -150,7 +153,7 @@ def chatuserLoop(inputFromUser):
                     # Custom responses only in value is found
                     if itemName != "null":
                         # Take values at variables
-                        STALLNAME=itemInformation
+                        STALLNAME=itemInformation[0] #TODO change to none
                         ITEMNAME=itemInformation[1]
                         PRICE=itemInformation[2]
                         DEVLIVERY_SERVICE=itemInformation[3]
@@ -165,81 +168,104 @@ def chatuserLoop(inputFromUser):
                         CALORIES=itemInformation[12]
                         ALLERGANTS=itemInformation[13]
                         if tag == "stall_name":
-                            customResponce =f" The item {itemName} is served by the {STALLNAME} stall"
-                            return customResponce
+                            listWords = intentFile["intents"][7]["context_set"]
+                            sentence = random.choice(listWords)
+                            sentence = sentence.replace("?meal?", ITEMNAME)
+                            sentence = sentence.replace("?stall?", STALLNAME)
+                            return sentence
                             break;
                         elif tag == "item_price":
-                            customResponce =f" The price of {itemName} is RM{PRICE}"
-                            return customResponce
+                            listWords = intentFile["intents"][8]["context_set"]
+                            sentence = random.choice(listWords)
+                            sentence = sentence.replace("?meal?", ITEMNAME)
+                            sentence = sentence.replace("?price?", f"{PRICE}0")
+                            return sentence
                             break;
                         elif tag == "delivery_service":
+                            listWords = intentFile["intents"][9]["context_set"]
                             if DEVLIVERY_SERVICE == "yes":
-                                tf = "can be"
+                                conj = "is"
                             else:
-                                tf = "cannot be"
-                            customResponce =f" The item {itemName} {tf} delivered to you"
-                            return customResponce
+                                conj = "is not"
+                            sentence = random.choice(listWords)
+                            sentence = sentence.replace("?meal?", ITEMNAME)
+                            sentence = sentence.replace("?conj?", conj)
+                            return sentence
                             break;
                         elif tag == "is_vegetarian":
+                            listWords = intentFile["intents"][10]["context_set"]
                             if IS_VEGETARIAN == "yes":
-                                tf = "is"
+                                conj = "is"
                             else:
-                                tf = "is not"
-                            customResponce =f"{itemName} {tf} vegetarian"
-                            return customResponce
-                            break;
+                                conj = "is not"
+                            sentence = random.choice(listWords)
+                            sentence = sentence.replace("?meal?", ITEMNAME)
+                            sentence = sentence.replace("?conj?", conj)
+                            return sentence
                         elif tag == "is_cosher":
+                            listWords = intentFile["intents"][11]["context_set"]
                             if IS_COSHER == "yes":
-                                tf = "is"
+                                conj = "is"
                             else:
-                                tf = "is not"
-                            customResponce =f"{itemName} {tf} cosher"
-                            return customResponce
-                            break;
-                        elif tag == "meal_time":
-                            customResponce =f"{itemName} is only served at {MEALTIME}"
-                            return customResponce
-                            break;
+                                conj = "is not"
+                            sentence = random.choice(listWords)
+                            sentence = sentence.replace("?meal?", ITEMNAME)
+                            sentence = sentence.replace("?conj?", conj)
+                            return sentence
                         elif tag == "is_dessert":
+                            listWords = intentFile["intents"][13]["context_set"]
                             if ISDESSERT == "yes":
-                                tf = "is"
+                                conj = "is"
                             else:
-                                tf = "is not"
-                            customResponce =f"{itemName} {tf} a dessert dish"
-                            return customResponce
-                            break;
+                                conj = "is not"
+                            sentence = random.choice(listWords)
+                            sentence = sentence.replace("?meal?", ITEMNAME)
+                            sentence = sentence.replace("?conj?", conj)
+                            return sentence
                         elif tag == "is_appetizer":
+                            listWords = intentFile["intents"][14]["context_set"]
                             if ISAPPATIZER == "yes":
-                                tf = "is"
+                                conj = "is"
                             else:
-                                tf = "is not"
-                            customResponce =f"{itemName} {tf} an appatizer"
-                            return customResponce
-                            break;
+                                conj = "is not"
+                            sentence = random.choice(listWords)
+                            sentence = sentence.replace("?meal?", ITEMNAME)
+                            sentence = sentence.replace("?conj?", conj)
+                            return sentence
                         elif tag == "is_hallal":
+                            listWords = intentFile["intents"][12]["context_set"]
                             if IS_HALLAL == "yes":
-                                tf = "is"
+                                conj = "is"
                             else:
-                                tf = "is not"
-                            customResponce =f"{itemName} {tf} hallal"
-                            return customResponce
-                            break;
+                                conj = "is not"
+                            sentence = random.choice(listWords)
+                            sentence = sentence.replace("?meal?", ITEMNAME)
+                            sentence = sentence.replace("?conj?", conj)
+                            return sentence
                         elif tag == "item_preperation_time":
-                            customResponce =f"{itemName} takes {PREPERATIONTIME}minutes to prepare"
-                            return customResponce
-                            break;    
+                            listWords = intentFile["intents"][15]["context_set"]
+                            sentence = random.choice(listWords)
+                            sentence = sentence.replace("?meal?", ITEMNAME)
+                            sentence = sentence.replace("?item_preperation_time?", f"{PREPERATIONTIME}")
+                            return sentence
                         elif tag == "item_meal_base":
-                            customResponce =f"{itemName} is a {MEALBASE} based meal"
-                            return customResponce
-                            break;
+                            listWords = intentFile["intents"][16]["context_set"]
+                            sentence = random.choice(listWords)
+                            sentence = sentence.replace("?meal?", ITEMNAME)
+                            sentence = sentence.replace("?mealbase?", MEALBASE)
+                            return sentence
                         elif tag == "calories":
-                            customResponce =f"There are {CALORIES}calories in {itemName}"
-                            return customResponce
-                            break;
+                            listWords = intentFile["intents"][17]["context_set"]
+                            sentence = random.choice(listWords)
+                            sentence = sentence.replace("?meal?", ITEMNAME)
+                            sentence = sentence.replace("?calories?", f"{CALORIES}")
+                            return sentence
                         elif tag == "allergants":
-                            customResponce =f"{itemName} contains {ALLERGANTS}"
-                            return customResponce
-                            break;
+                            listWords = intentFile["intents"][18]["context_set"]
+                            sentence = random.choice(listWords)
+                            sentence = sentence.replace("?meal?", ITEMNAME)
+                            sentence = sentence.replace("?allergants?", ALLERGANTS)
+                            return sentence
                         else:
                            return random.choice(responses) # Result does not have input variable. Provide generic response
                     else:

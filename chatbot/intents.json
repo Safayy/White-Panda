@@ -44,75 +44,75 @@
     },
     {
       "tag": "stall_name",
-      "patterns": [ "what stall", "which stall","which stalls","what stalls","stall"],
+      "patterns": [ "what stall", "which stall","which stalls","what stalls","stall","what stall is in"],
       "responses": [ "We have many stall in our cafeteria that serve a number of differnt meals. Please enjoy the variery" ],
-      "context_set": ""
+      "context_set": ["?meal? is served in the ?stall? stall","The ?stall? stall sells that item", "?meal? is only available in the ?stall? stall"]
     },
     {
       "tag": "item_price",
       "patterns": [ "cost", "price", "how much","what price","what cost"],
       "responses": [ "To see the cost, please hover over the cart icon above" ],
-      "context_set": ""
+      "context_set": ["?meal? costs ?price? per serving", "The price is ?price?"]
     },
     {
       "tag": "is_delivery_service",
       "patterns": [ "deliverable", "deliver", "delivery" ],
-      "responses": [ "Some items are deliverable right to your location" ],
-      "context_set": ""
+      "responses": [ "Some items are deliverable right to your location" ,"Many items can be sent directly to your doorstep","Most items in our cafeteria will be deliverd to you"],
+      "context_set": ["?meal? ?conj? deliverable", "That meal ?conj? deliverable to you"]
     },
     {
       "tag": "is_vegetarian",
       "patterns": [ "is vegetarian", "vegetarian","hindu" ],
-      "responses": [ "Many items in our cafeteria are vegetarian friendly" ],
-      "context_set": ""
+      "responses": [ "Many items in our cafeteria are vegetarian friendly","We have a number of vegetarian meal options","There are many vegetarian meals in our cafeteria"],
+      "context_set": ["?meal? ?conj? vegetarian", "That meal ?conj? vegetarian"]
     },
     {
       "tag": "is_cosher",
       "patterns": [ "is cosher", "cosher","jewish"],
-      "responses": [ "Most items in our cafeteria are cosher safe" ],
-      "context_set": ""
+      "responses": [ "Most items in our cafeteria are cosher safe","Many meals are cosher safe in our cafeteria"],
+      "context_set": ["?meal? ?conj? cosher", "That meal ?conj? cosher", "?meal? ?conj? safe for a cosher diet"]
     },
     {
       "tag": "is_hallal",
       "patterns": [ "is hallal", "hallal","muslim","the hallal"],
-      "responses": [ "We have many hallal items in our cafeteria" ],
-      "context_set": ""
+      "responses": [ "We have many hallal items in our cafeteria","Most items in our cafeteria are hallal","Many items are hallal"],
+      "context_set": ["?meal? ?conj? hallal", "That meal ?conj? hallal"]
     },
     {
       "tag": "is_dessert",
       "patterns": [ "is dessert", "dessert","is a dessert"],
-      "responses": [ "We are building up our amount of dessert currently. The kuih here is delicious" ],
-      "context_set": ""
+      "responses": [ "We are building up our amount of dessert currently","There are a number of desserts in the cafeteria"],
+      "context_set": ["?meal? ?conj? a dessert", "That meal ?conj? a dessert"]
     },
     {
       "tag": "is_appetizer",
-      "patterns": [ "is it appetizer", "appetizer", "is an appatizer"],
+      "patterns": [ "is it appetizer", "appetizer", "is an appetizer"],
       "responses": [ "We have many appetizers in our cafeteria" ],
-      "context_set": ""
+      "context_set": ["?meal? ?conj? an appetizer", "That meal ?conj? an appatizer"]
     },
     {
       "tag": "item_preperation_time",
       "patterns": [ "how long does take to prepare", "long make","long prepare","preparation time","time to make"],
-      "responses": [ "The meals are prepared in a short resonable time and will be avaiable to you, fresh, to enjoy" ],
-      "context_set": ""
+      "responses": [ "The meals are prepared in a short resonable time and will be avaiable to you, fresh, to enjoy","Meal preperation time is very short for all our meals"],
+      "context_set": ["?meal? takes ?item_preperation_time? minutes to prepare", "?item_preperation_time? minutes are required to prepare ?meal?", "?item_preperation_time? minutes are required to make that meal"]
     },
     {
       "tag": "item_meal_base",
       "patterns": [ "what is the base of", "what is", "explain", "base of", "based on","noodle","rice","bread"],
-      "responses": [ "We have many cuisines in our cafeteria, based in rice, bread and even noodles" ],
-      "context_set": ""
+      "responses": [ "We have many cuisines in our cafeteria, based in rice, bread and even noodles","There are a diverse type of meals offered by our cafeteria"],
+      "context_set": ["?meal? is a ?mealbase? based meal", "?meal? is a meal based on ?mealbase?", "?mealbase? is the primary component of ?meal?"]
     },
     {
       "tag": "calories",
       "patterns": [ "how many calories is", "calories" ],
-      "responses": [ "All items in our cafeteria have a calorie counted for" ],
-      "context_set": ""
+      "responses": [ "All items in our cafeteria have a calorie counted for"],
+      "context_set": ["?meal? contains ?calories? calories", "?calories? calories are in ?meal?"]
     },
     {
       "tag": "allergants",
-      "patterns": [ "alergic", "allergy", "which have allergy","a allergy"],
-      "responses": [ "Some meals may contain traces of items that may cause allergies. We advice you to check before you consume anything" ],
-      "context_set": ""
+      "patterns": [ "what allergants are in","allergants","alergic", "allergy", "which have allergy","a allergy"],
+      "responses": [ "Some meals may contain traces of items that may cause allergies. We advice you to check before you consume anything","Please check the ingredients of every meal if you have any allergies"],
+      "context_set": ["?meal? contains ?allergants?", "If you have alergies, ?meal? contains ?allergants? so beware"]
     }
   ]
 }
