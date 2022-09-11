@@ -1,5 +1,5 @@
 # Nott-A-Cafeteria Wiki
-Chatbot implemented using tensor flow and natural language processing.
+Chatbot implemented using tensor flow and natural language processing
 
 ## Demonstrative Video
 The below video demonstrates and explains on the chatbot and website. Click [here](https://www.youtube.com/watch?v=qC3bw63kzMI) or the caption gif below
